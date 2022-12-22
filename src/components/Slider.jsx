@@ -2,7 +2,7 @@ import { ArrowLeftOutlined, ArrowRightOutlined } from "@mui/icons-material";
 import React, { useState } from "react";
 import { ApiSlides } from "../apiFolder/SliderApi";
 
-import './Slider.css';
+import "./Slider.css";
 
 // import { Container } from './styles';
 
@@ -15,29 +15,27 @@ function Slider() {
   const arrowStyle =
     "rounded-full bg-grey flex justify-center items-center shadow-sm hover:cursor-pointer";
 
-
-    const nextSlide = () => {
-      if (activeSlide === slides.length - 1) {
-        setActiveSlide(0)
-      }
-      else{
-        setActiveSlide(activeSlide +1)
-      }
+  const nextSlide = () => {
+    if (activeSlide === slides.length - 1) {
+      setActiveSlide(0);
+    } else {
+      setActiveSlide(activeSlide + 1);
     }
+  };
 
-    const prvSlide = () =>{
-      if (activeSlide === 0) {
-        setActiveSlide(slides.length -1)
-      }else{
-        setActiveSlide(activeSlide - 1)
-      }
+  const prvSlide = () => {
+    if (activeSlide === 0) {
+      setActiveSlide(slides.length - 1);
+    } else {
+      setActiveSlide(activeSlide - 1);
     }
+  };
 
   return (
-    <div className="parentDiv h-[540px] bg-white flex items-center justify-between">
+    <div className="parentDiv h-[540px] bg-white flex items-center justify-between mobile:hidden">
       {/*leftarrow div*/}
       <div className={arrowStyle}>
-        <ArrowLeftOutlined style={{ fontSize: "50px" }} onClick={prvSlide}/>
+        <ArrowLeftOutlined style={{ fontSize: "50px" }} onClick={prvSlide} />
       </div>
       {/*slide div */}
       {slides.map((slide, index) => {
@@ -58,9 +56,7 @@ function Slider() {
                   />
                 </div>
                 <div className="des flex flex-col flex-1 place-items-start justify-center ml-11">
-                  <h2 className="text-[55px]">
-                   {slide.content.h2}
-                  </h2>
+                  <h2 className="text-[55px]">{slide.content.h2}</h2>
                   <p className="text-[30px]">{slide.content.p}</p>
                   <buttom className="btn">Shop now</buttom>
                 </div>
@@ -71,7 +67,7 @@ function Slider() {
       })}
       {/*rightarrow div */}
       <div className={arrowStyle}>
-        <ArrowRightOutlined style={{ fontSize: "50px" }} onClick = {nextSlide}/>
+        <ArrowRightOutlined style={{ fontSize: "50px" }} onClick={nextSlide} />
       </div>
     </div>
   );

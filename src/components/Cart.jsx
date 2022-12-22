@@ -16,21 +16,21 @@ function Cart() {
       <div className="p-5">
         <div className="flex justify-center text-5xl">Carrinho</div>
 
-        <div className="flex items-center justify-between mt-4 ">
+        <div className="flex items-center justify-between mt-4 mobile:flex-col">
           <button className="btn bg-white text-[#35B639] border-2 border-[#35B639] hover:bg-white">
             Continue comprando
           </button>
-          <div className="flex underline text-lg hover:cursor-pointer">
+          <div className="flex underline text-lg hover:cursor-pointer mobile:mt-3 mobile:mb-3">
             <p>Itens no seu carrinho : 3</p>
             <p className="ml-5">Lista de itens: 0</p>
           </div>
           <button className="btn">Checkout</button>
         </div>
         {/*central div*/}
-        <div className="flex mt-7">
+        <div className="flex mt-7 mobile:flex-col">
           <div className="flex flex-col flex-1 ">
             {/*Lista de produtos div */}
-            <div className="flex w-[100%] h-auto items-center ">
+            <div className="flex w-[100%] h-auto items-center mobile:flex-col">
               <div className="product flex self-start">
                 <img
                   className="w-[8rem] h-[80%] rounded-lg shadow-lg hover:scale-[1.1] ease-in duration-300"
@@ -53,7 +53,7 @@ function Cart() {
                   </p>
                 </div>
               </div>
-              <div className=" flex flex-col justify-center items-center flex-auto">
+              <div className=" flex flex-col justify-center items-center flex-auto mobile:mt-3">
                 <Counter />
                 <p className="flex items-center justify-center text-4xl mt-3">
                   <b>$70</b>
@@ -61,7 +61,7 @@ function Cart() {
               </div>
             </div>
             <hr className="mt-7 mb-7" />
-            <div className="flex w-[100%] h-auto items-center ">
+            <div className="flex w-[100%] h-auto items-center mobile:flex-col">
               <div className="product flex self-start">
                 <img
                   className="w-[8rem] h-[80%] rounded-lg shadow-lg hover:scale-[1.1] ease-in duration-300"
@@ -84,7 +84,7 @@ function Cart() {
                   </p>
                 </div>
               </div>
-              <div className=" flex flex-col justify-center items-center flex-auto">
+              <div className=" flex flex-col justify-center items-center flex-auto mobile:mt-3">
                 <Counter />
                 <p className="flex items-center justify-center text-4xl mt-3">
                   <b>$70</b>

@@ -13,7 +13,7 @@ function ProductPage() {
       <Announce />
       <Navbar />
 
-      <div className="flex justify-center h-[40rem]">
+      <div className="flex justify-center h-[40rem] mobile:flex-col mobile:mt-3 mobile:p-3">
         <div className="flex flex-1 items-center justify-center">
           <img
             src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8YmljeWNsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60"
@@ -21,9 +21,9 @@ function ProductPage() {
             className="w-[80%] h-[80%] rounded-lg shadow-lg hover:scale-[1.1] ease-in duration-300"
           />
         </div>
-        <div className="flex-[1.3] flex items-start justify-items-start flex-col mt-10">
-          <h1 className="title text-[40px] ">Bicicleta urbana topo de linha</h1>
-          <p className="pr-[4rem] text-justify mt-4">
+        <div className="flex-[1.3] flex items-start justify-items-start flex-col mt-10 mobile:items-center">
+          <h1 className="title text-[40px] mobile:text-[30px]">Bicicleta urbana topo de linha</h1>
+          <p className="pr-[4rem] text-justify mt-4 mobile:pr-0">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
